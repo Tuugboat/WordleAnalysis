@@ -91,52 +91,134 @@ Finally, we can reconsider the $Y$, $G$, and $C$ values but ignore the vowels wh
 The fun stuff!
 
 ```{r ResultLists, echo=F}
-Y_FoF = Full_Score %>% arrange(desc(Y)) %>% head(5) %>% select(Word, Y, Y_Cons) %>% mutate(Y=round(Y, 3), Y_Cons=round(Y_Cons, 3))
-Y_SoS = Short_Score %>% arrange(desc(Y)) %>% head(5) %>% select(Word, Y, Y_Cons) %>% mutate(Y=round(Y, 3), Y_Cons=round(Y_Cons, 3))
-Y_FoS = Full_On_Short_Score %>% arrange(desc(Y)) %>% head(5) %>% select(Word, Y, Y_Cons) %>% mutate(Y=round(Y, 3), Y_Cons=round(Y_Cons, 3))
+Y_FoF = Full_Score %>% arrange(desc(Y)) %>% head(5) %>% select(Word, Y) %>% mutate(Y=round(Y, 3))
+Y_SoS = Short_Score %>% arrange(desc(Y)) %>% head(5) %>% select(Word, Y) %>% mutate(Y=round(Y, 3))
+Y_FoS = Full_On_Short_Score %>% arrange(desc(Y)) %>% head(5) %>% select(Word, Y) %>% mutate(Y=round(Y, 3))
 
-G_FoF = Full_Score %>% arrange(desc(G)) %>% head(5) %>% select(Word, G, G_Cons) %>% mutate(G=round(G, 3), G_Cons = round(G_Cons, 3))
-G_SoS = Short_Score %>% arrange(desc(G)) %>% head(5) %>% select(Word, G, G_Cons) %>% mutate(G=round(G, 3), G_Cons = round(G_Cons, 3))
-G_FoS = Full_On_Short_Score %>% arrange(desc(G)) %>% head(5) %>% select(Word, G, G_Cons) %>% mutate(G=round(G, 3), G_Cons = round(G_Cons, 3))
+Y_FoF_Cons = Full_Score %>% arrange(desc(Y_Cons)) %>% head(5) %>% select(Word, Y_Cons) %>% mutate(Y_Cons=round(Y_Cons, 3))
+Y_SoS_Cons = Short_Score %>% arrange(desc(Y_Cons)) %>% head(5) %>% select(Word, Y_Cons) %>% mutate(Y_Cons=round(Y_Cons, 3))
+Y_FoS_Cons = Full_On_Short_Score %>% arrange(desc(Y_Cons)) %>% head(5) %>% select(Word, Y_Cons) %>% mutate(Y_Cons=round(Y_Cons, 3))
+
+G_FoF = Full_Score %>% arrange(desc(G)) %>% head(5) %>% select(Word, G) %>% mutate(G=round(G, 3))
+G_SoS = Short_Score %>% arrange(desc(G)) %>% head(5) %>% select(Word, G) %>% mutate(G=round(G, 3))
+G_FoS = Full_On_Short_Score %>% arrange(desc(G)) %>% head(5) %>% select(Word, G) %>% mutate(G=round(G, 3))
+
+G_FoF_Cons = Full_Score %>% arrange(desc(G_Cons)) %>% head(5) %>% select(Word, G_Cons) %>% mutate(G_Cons=round(G_Cons, 3))
+G_SoS_Cons = Short_Score %>% arrange(desc(G_Cons)) %>% head(5) %>% select(Word, G_Cons) %>% mutate(G_Cons=round(G_Cons, 3))
+G_FoS_Cons = Full_On_Short_Score %>% arrange(desc(G_Cons)) %>% head(5) %>% select(Word, G_Cons) %>% mutate(G_Cons=round(G_Cons, 3))
+
+C_FoF = Full_Score %>% arrange(desc(Y)) %>% head(5) %>% select(Word, C) %>% mutate(C=round(C, 3))
+C_SoS = Short_Score %>% arrange(desc(Y)) %>% head(5) %>% select(Word, C) %>% mutate(C=round(C, 3))
+C_FoS = Full_On_Short_Score %>% arrange(desc(Y)) %>% head(5) %>% select(Word, C) %>% mutate(C=round(C, 3))
+
+C_FoF_Cons = Full_Score %>% arrange(desc(C_Cons)) %>% head(5) %>% select(Word, C_Cons) %>% mutate(C_Cons=round(C_Cons, 3))
+C_SoS_Cons = Short_Score %>% arrange(desc(C_Cons)) %>% head(5) %>% select(Word, C_Cons) %>% mutate(C_Cons=round(C_Cons, 3))
+C_FoS_Cons = Full_On_Short_Score %>% arrange(desc(C_Cons)) %>% head(5) %>% select(Word, C_Cons) %>% mutate(C_Cons=round(C_Cons, 3))
+
 ```
 
 ## Letter-Seeking
-This is our Yellow-Maxing list, seperated by scope of the guesses and scope of the possible words.
+This is our Yellow-Maxing list, separated by scope of the guesses and scope of the possible words. The first set is our full list, judged on it's ability to guess the words in the full list. The second set of three is the words in the short list, predicting the short list. The last set of three values is for the words in the full list, predicting words in the short list.
 
-### Full List judged on Full List
-```{r Table1, echo=F}
+
+```{r Table_Y, echo=F}
 Y_Full = cbind(Y_FoF, Y_SoS, Y_FoS)
 Y_Full %>%
-  knitr::kable("simple", col.names=c("Word", "Y", "Y (Consonants)", "Word", "Y", "Y (Consonants)", "Word", "Y", "Y (Consonants)")) %>%
-  kable_material(c("striped", "hover")) %>% add_header_above(header=c("Full on Full"=3, "SoS"=3, "FoS"=3))
+  knitr::kable("simple", col.names=c("Word (FoS)", "Y", "Word (SoS)", "Y", "Word (FoS)", "Y")) %>%
+  kable_material(c("striped", "hover"))
 ```
 
-### Short List judge on Short List
-```{r Table2, echo=F}
-Y_SoS %>% knitr::kable("simple",col.names=c("Word", "Y", "Y (Consonants)")) %>% kable_material(c("striped", "hover"))
+### Consonants
+
+```{r Table_Y_Cons, echo=F}
+Y_Full_Cons = cbind(Y_FoF_Cons, Y_SoS_Cons, Y_FoS_Cons)
+Y_Full_Cons %>%
+  knitr::kable("simple", col.names=c("Word (FoS)", "Y", "Word (SoS)", "Y", "Word (FoS)", "Y")) %>%
+  kable_material(c("striped", "hover"))
+
 ```
 
-### Full List judged on Short List
-```{r Table3, echo=F}
-Y_FoS  %>% knitr::kable("simple",col.names=c("Word", "Y", "Y (Consonants)")) %>% kable_material(c("striped", "hover"))
+## Position-Seeking
+This table follows the same logic, 3 triplets based on their scoring method.
+
+```{r Table_G, echo=F}
+G_Full = cbind(G_FoF, G_SoS, G_FoS)
+G_Full %>%
+  knitr::kable("simple", col.names=c("Word (FoS)", "G", "Word (SoS)", "G", "Word (FoS)", "G")) %>%
+  kable_material(c("striped", "hover"))
 ```
 
-## Position Seeking
-Green-Maxing yields the following sets:
+### Consonants
 
-### Full List judged on Full List
-```{r Table4, echo=F}
-G_FoF %>% knitr::kable("simple",col.names=c("Word", "G", "G (Consonants)")) %>% kable_material(c("striped", "hover"))
+```{r Table_G_Cons, echo=F}
+G_Full_Cons = cbind(G_FoF_Cons, G_SoS_Cons, G_FoS_Cons)
+G_Full_Cons %>%
+  knitr::kable("simple", col.names=c("Word (FoS)", "G", "Word (SoS)", "G", "Word (FoS)", "G")) %>%
+  kable_material(c("striped", "hover"))
 ```
 
-### Short List judge on Short List
-```{r Table5, echo=F}
-G_SoS %>% knitr::kable("simple",col.names=c("Word", "G", "G (Consonants)")) %>% kable_material(c("striped", "hover"))
+## Combined Weighting
+
+Here is the combined values for $t=0.75$.
+
+```{r Table_C, echo=F}
+C_Full = cbind(C_FoF, C_SoS, C_FoS)
+C_Full %>%
+  knitr::kable("simple", col.names=c("Word (FoS)", "C", "Word (SoS)", "C", "Word (FoS)", "C")) %>%
+  kable_material(c("striped", "hover"))
 ```
 
-### Full List judged on Short List
-```{r Table6, echo=F}
-G_FoS %>% knitr::kable("simple",col.names=c("Word", "G", "G (Consonants)")) %>% kable_material(c("striped", "hover"))
+### Consonants
+
+
+```{r Table_C_Cons, echo=F}
+C_Full_Cons = cbind(C_FoF_Cons, C_SoS_Cons, C_FoS_Cons)
+C_Full_Cons %>%
+  knitr::kable("simple", col.names=c("Word (FoS)", "C", "Word (SoS)", "C", "Word (FoS)", "C")) %>%
+  kable_material(c("striped", "hover"))
 ```
 
 
+# Conclusion
+So, depending on your and desired strategy, one of the words from the following table is certainly the best option. Based purely on estimation, it is likely that the consonant-filtered long-on-short combined score is the most efficient word to pick, but doing this hinges on a balanced strategy and considering words that are not commonly used which minimizes your chances of having a *correct* first guess. By picking the combined-score short-on-short word, you alternatively maximize your chance of having a correct first guess.
+
+```{r FinalTable, echo=F}
+Y_FoF_Top = Full_Score %>% arrange(desc(Y)) %>% head(1) %>% pull(Word)
+Y_FoF_Top_Cons = Full_Score %>% arrange(desc(Y_Cons)) %>% head(1) %>% pull(Word)
+
+Y_SoS_Top = Short_Score %>% arrange(desc(Y)) %>% head(1) %>% pull(Word)
+Y_SoS_Top_Cons = Short_Score %>% arrange(desc(Y_Cons)) %>% head(1) %>% pull(Word)
+
+Y_FoS_Top = Full_On_Short_Score %>% arrange(desc(Y)) %>% head(1) %>% pull(Word)
+Y_FoS_Top_Cons = Full_On_Short_Score %>% arrange(desc(Y_Cons)) %>% head(1) %>% pull(Word)
+
+G_FoF_Top = Full_Score %>% arrange(desc(G)) %>% head(1) %>% pull(Word)
+G_FoF_Top_Cons = Full_Score %>% arrange(desc(G_Cons)) %>% head(1) %>% pull(Word)
+
+G_SoS_Top = Short_Score %>% arrange(desc(G)) %>% head(1) %>% pull(Word)
+G_SoS_Top_Cons = Short_Score %>% arrange(desc(G_Cons)) %>% head(1) %>% pull(Word)
+
+G_FoS_Top = Full_On_Short_Score %>% arrange(desc(G)) %>% head(1) %>% pull(Word)
+G_FoS_Top_Cons = Full_On_Short_Score %>% arrange(desc(G_Cons)) %>% head(1) %>% pull(Word)
+
+C_FoF_Top = Full_Score %>% arrange(desc(C)) %>% head(1) %>% pull(Word)
+C_FoF_Top_Cons = Full_Score %>% arrange(desc(C_Cons)) %>% head(1) %>% pull(Word)
+
+C_SoS_Top = Short_Score %>% arrange(desc(C)) %>% head(1) %>% pull(Word)
+C_SoS_Top_Cons = Short_Score %>% arrange(desc(C_Cons)) %>% head(1) %>% pull(Word)
+
+C_FoS_Top = Full_On_Short_Score %>% arrange(desc(C)) %>% head(1) %>% pull(Word)
+C_FoS_Top_Cons = Full_On_Short_Score %>% arrange(desc(C_Cons)) %>% head(1) %>% pull(Word)
+
+FullTable = rbind(c(Y=Y_FoF_Top, G=G_FoF_Top, C=C_FoF_Top),
+                  c(Y=Y_FoF_Top_Cons, G=G_FoF_Top_Cons, C=C_FoF_Top_Cons),
+                  c(Y=Y_SoS_Top, G=G_SoS_Top, C=C_SoS_Top),
+                  c(Y=Y_SoS_Top_Cons, G=G_SoS_Top_Cons, C=C_SoS_Top_Cons),
+                  c(Y=Y_FoS_Top, G=G_FoS_Top, C=C_FoS_Top),
+                  c(Y=Y_FoS_Top_Cons, G=G_FoS_Top_Cons, C=C_FoS_Top_Cons))
+rownames(FullTable) <- c("Full on Full", "... Consonants", "Short on Short", "... Consonants", "Full on Short", "... Consonants")
+
+FullTable %>%
+  knitr::kable("simple", col.names=c("Y", "G", "C")) %>%
+  kable_material(c("striped", "hover", "wide"))
+```
