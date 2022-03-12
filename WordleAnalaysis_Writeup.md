@@ -112,28 +112,70 @@ scope of the possible words.
 <tr class="header">
 <th style="text-align: left;">Word</th>
 <th style="text-align: right;">Y</th>
+<th style="text-align: right;">Y (Consonants)</th>
+<th style="text-align: left;">Word</th>
+<th style="text-align: right;">Y</th>
+<th style="text-align: right;">Y (Consonants)</th>
+<th style="text-align: left;">Word</th>
+<th style="text-align: right;">Y</th>
+<th style="text-align: right;">Y (Consonants)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">arose</td>
 <td style="text-align: right;">1.773</td>
+<td style="text-align: right;">0.596</td>
+<td style="text-align: left;">arose</td>
+<td style="text-align: right;">1.909</td>
+<td style="text-align: right;">0.777</td>
+<td style="text-align: left;">arose</td>
+<td style="text-align: right;">1.909</td>
+<td style="text-align: right;">0.777</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">orate</td>
 <td style="text-align: right;">1.771</td>
+<td style="text-align: right;">0.594</td>
+<td style="text-align: left;">raise</td>
+<td style="text-align: right;">1.884</td>
+<td style="text-align: right;">0.777</td>
+<td style="text-align: left;">arise</td>
+<td style="text-align: right;">1.884</td>
+<td style="text-align: right;">0.777</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">arise</td>
 <td style="text-align: right;">1.769</td>
+<td style="text-align: right;">0.596</td>
+<td style="text-align: left;">arise</td>
+<td style="text-align: right;">1.884</td>
+<td style="text-align: right;">0.777</td>
+<td style="text-align: left;">raise</td>
+<td style="text-align: right;">1.884</td>
+<td style="text-align: right;">0.777</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">raise</td>
 <td style="text-align: right;">1.769</td>
+<td style="text-align: right;">0.596</td>
+<td style="text-align: left;">tears</td>
+<td style="text-align: right;">1.871</td>
+<td style="text-align: right;">1.031</td>
+<td style="text-align: left;">serai</td>
+<td style="text-align: right;">1.884</td>
+<td style="text-align: right;">0.777</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">serai</td>
 <td style="text-align: right;">1.769</td>
+<td style="text-align: right;">0.596</td>
+<td style="text-align: left;">rates</td>
+<td style="text-align: right;">1.871</td>
+<td style="text-align: right;">1.031</td>
+<td style="text-align: left;">aster</td>
+<td style="text-align: right;">1.871</td>
+<td style="text-align: right;">1.031</td>
 </tr>
 </tbody>
 </table>
@@ -145,28 +187,34 @@ scope of the possible words.
 <tr class="header">
 <th style="text-align: left;">Word</th>
 <th style="text-align: right;">Y</th>
+<th style="text-align: right;">Y (Consonants)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">arose</td>
 <td style="text-align: right;">1.909</td>
+<td style="text-align: right;">0.777</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">raise</td>
 <td style="text-align: right;">1.884</td>
+<td style="text-align: right;">0.777</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">arise</td>
 <td style="text-align: right;">1.884</td>
+<td style="text-align: right;">0.777</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">tears</td>
 <td style="text-align: right;">1.871</td>
+<td style="text-align: right;">1.031</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">rates</td>
 <td style="text-align: right;">1.871</td>
+<td style="text-align: right;">1.031</td>
 </tr>
 </tbody>
 </table>
@@ -178,28 +226,34 @@ scope of the possible words.
 <tr class="header">
 <th style="text-align: left;">Word</th>
 <th style="text-align: right;">Y</th>
+<th style="text-align: right;">Y (Consonants)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">arose</td>
 <td style="text-align: right;">1.909</td>
+<td style="text-align: right;">0.777</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">arise</td>
 <td style="text-align: right;">1.884</td>
+<td style="text-align: right;">0.777</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">raise</td>
 <td style="text-align: right;">1.884</td>
+<td style="text-align: right;">0.777</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">serai</td>
 <td style="text-align: right;">1.884</td>
+<td style="text-align: right;">0.777</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">aster</td>
 <td style="text-align: right;">1.871</td>
+<td style="text-align: right;">1.031</td>
 </tr>
 </tbody>
 </table>
@@ -215,28 +269,34 @@ Green-Maxing yields the following sets:
 <tr class="header">
 <th style="text-align: left;">Word</th>
 <th style="text-align: right;">G</th>
+<th style="text-align: right;">G (Consonants)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">soree</td>
 <td style="text-align: right;">0.651</td>
+<td style="text-align: right;">0.228</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">salay</td>
 <td style="text-align: right;">0.607</td>
+<td style="text-align: right;">0.339</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">boree</td>
 <td style="text-align: right;">0.592</td>
+<td style="text-align: right;">0.169</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">sairy</td>
 <td style="text-align: right;">0.586</td>
+<td style="text-align: right;">0.338</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">saily</td>
 <td style="text-align: right;">0.586</td>
+<td style="text-align: right;">0.338</td>
 </tr>
 </tbody>
 </table>
@@ -248,28 +308,34 @@ Green-Maxing yields the following sets:
 <tr class="header">
 <th style="text-align: left;">Word</th>
 <th style="text-align: right;">G</th>
+<th style="text-align: right;">G (Consonants)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">sores</td>
 <td style="text-align: right;">0.886</td>
+<td style="text-align: right;">0.514</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">sales</td>
 <td style="text-align: right;">0.874</td>
+<td style="text-align: right;">0.499</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">soles</td>
 <td style="text-align: right;">0.870</td>
+<td style="text-align: right;">0.499</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">sates</td>
 <td style="text-align: right;">0.855</td>
+<td style="text-align: right;">0.480</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">sires</td>
 <td style="text-align: right;">0.844</td>
+<td style="text-align: right;">0.514</td>
 </tr>
 </tbody>
 </table>
@@ -281,28 +347,34 @@ Green-Maxing yields the following sets:
 <tr class="header">
 <th style="text-align: left;">Word</th>
 <th style="text-align: right;">G</th>
+<th style="text-align: right;">G (Consonants)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">soles</td>
 <td style="text-align: right;">0.870</td>
+<td style="text-align: right;">0.499</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">cones</td>
 <td style="text-align: right;">0.825</td>
+<td style="text-align: right;">0.454</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">sures</td>
 <td style="text-align: right;">0.820</td>
+<td style="text-align: right;">0.514</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">tales</td>
 <td style="text-align: right;">0.813</td>
+<td style="text-align: right;">0.439</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">mores</td>
 <td style="text-align: right;">0.812</td>
+<td style="text-align: right;">0.440</td>
 </tr>
 </tbody>
 </table>

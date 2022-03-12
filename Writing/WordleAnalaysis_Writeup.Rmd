@@ -91,13 +91,13 @@ Finally, we can reconsider the $Y$, $G$, and $C$ values but ignore the vowels wh
 The fun stuff!
 
 ```{r ResultLists, echo=F}
-Y_FoF = Full_Score %>% arrange(desc(Y)) %>% head(5) %>% select(Word, Y) %>% mutate(Y=round(Y, 3))
-Y_SoS = Short_Score %>% arrange(desc(Y)) %>% head(5) %>% select(Word, Y) %>% mutate(Y=round(Y, 3))
-Y_FoS = Full_On_Short_Score %>% arrange(desc(Y)) %>% head(5) %>% select(Word, Y) %>% mutate(Y=round(Y, 3))
+Y_FoF = Full_Score %>% arrange(desc(Y)) %>% head(5) %>% select(Word, Y, Y_Cons) %>% mutate(Y=round(Y, 3), Y_Cons=round(Y_Cons, 3))
+Y_SoS = Short_Score %>% arrange(desc(Y)) %>% head(5) %>% select(Word, Y, Y_Cons) %>% mutate(Y=round(Y, 3), Y_Cons=round(Y_Cons, 3))
+Y_FoS = Full_On_Short_Score %>% arrange(desc(Y)) %>% head(5) %>% select(Word, Y, Y_Cons) %>% mutate(Y=round(Y, 3), Y_Cons=round(Y_Cons, 3))
 
-G_FoF = Full_Score %>% arrange(desc(G)) %>% head(5) %>% select(Word, G) %>% mutate(G=round(G, 3))
-G_SoS = Short_Score %>% arrange(desc(G)) %>% head(5) %>% select(Word, G) %>% mutate(G=round(G, 3))
-G_FoS = Full_On_Short_Score %>% arrange(desc(G)) %>% head(5) %>% select(Word, G) %>% mutate(G=round(G, 3))
+G_FoF = Full_Score %>% arrange(desc(G)) %>% head(5) %>% select(Word, G, G_Cons) %>% mutate(G=round(G, 3), G_Cons = round(G_Cons, 3))
+G_SoS = Short_Score %>% arrange(desc(G)) %>% head(5) %>% select(Word, G, G_Cons) %>% mutate(G=round(G, 3), G_Cons = round(G_Cons, 3))
+G_FoS = Full_On_Short_Score %>% arrange(desc(G)) %>% head(5) %>% select(Word, G, G_Cons) %>% mutate(G=round(G, 3), G_Cons = round(G_Cons, 3))
 ```
 
 ## Letter-Seeking
@@ -105,18 +105,20 @@ This is our Yellow-Maxing list, seperated by scope of the guesses and scope of t
 
 ### Full List judged on Full List
 ```{r Table1, echo=F}
-Y_FoF %>% knitr::kable("simple", col.names=c("Word", "Y")) %>% kable_material(c("striped", "hover"))
-
+Y_Full = cbind(Y_FoF, Y_SoS, Y_FoS)
+Y_Full %>%
+  knitr::kable("simple", col.names=c("Word", "Y", "Y (Consonants)", "Word", "Y", "Y (Consonants)", "Word", "Y", "Y (Consonants)")) %>%
+  kable_material(c("striped", "hover")) %>% add_header_above(header=c("Full on Full"=3, "SoS"=3, "FoS"=3))
 ```
 
 ### Short List judge on Short List
 ```{r Table2, echo=F}
-Y_SoS %>% knitr::kable("simple", col.names=c("Word", "Y")) %>% kable_material(c("striped", "hover")) %>% add_header_above(header=c("Kalamazoo"=2))
+Y_SoS %>% knitr::kable("simple",col.names=c("Word", "Y", "Y (Consonants)")) %>% kable_material(c("striped", "hover"))
 ```
 
 ### Full List judged on Short List
 ```{r Table3, echo=F}
-Y_FoS  %>% knitr::kable("simple", col.names=c("Word", "Y")) %>% kable_material(c("striped", "hover"))
+Y_FoS  %>% knitr::kable("simple",col.names=c("Word", "Y", "Y (Consonants)")) %>% kable_material(c("striped", "hover"))
 ```
 
 ## Position Seeking
@@ -124,17 +126,17 @@ Green-Maxing yields the following sets:
 
 ### Full List judged on Full List
 ```{r Table4, echo=F}
-G_FoF %>% knitr::kable("simple", col.names=c("Word", "G")) %>% kable_material(c("striped", "hover"))
+G_FoF %>% knitr::kable("simple",col.names=c("Word", "G", "G (Consonants)")) %>% kable_material(c("striped", "hover"))
 ```
 
 ### Short List judge on Short List
 ```{r Table5, echo=F}
-G_SoS %>% knitr::kable("simple", col.names=c("Word", "G")) %>% kable_material(c("striped", "hover"))
+G_SoS %>% knitr::kable("simple",col.names=c("Word", "G", "G (Consonants)")) %>% kable_material(c("striped", "hover"))
 ```
 
 ### Full List judged on Short List
 ```{r Table6, echo=F}
-G_FoS %>% knitr::kable("simple", col.names=c("Word", "G")) %>% kable_material(c("striped", "hover"))
+G_FoS %>% knitr::kable("simple",col.names=c("Word", "G", "G (Consonants)")) %>% kable_material(c("striped", "hover"))
 ```
 
 
