@@ -52,7 +52,7 @@ We make the simple observation that
 $$P(1\\{x \\in W\\}) = E\[1\\{x \\in W\\}\] = \\frac{1}{n} \\sum\_{i=1}^n 1\\{x \\in w\_i\\}$$
 Where *x* is a given letter, *W* is a random word and *w*<sub>*i*</sub>
 is a specific word within our target sample. We then calculate
-*P*(1{*x* ∈ *W*}) for each unique letter in a word a form the expected
+*P*(1{*x*∈*W*}) for each unique letter in a word a form the expected
 yellow results, *Y* as
 
 $$Y=\\sum\_{j=1}^uP(1\\{x\_j\\in W\\})$$
@@ -65,20 +65,20 @@ value to be the highest possible.
 ## Position Hunting
 
 This is largely similiar to letter hunting, but instead of being
-concerned with *P*(1{*x* ∈ *W*}) we now need to calculate the letter
-being in the correct spot, which is given by
+concerned with *P*(1{*x*∈*W*}) we now need to calculate the letter being
+in the correct spot, which is given by
 
 $$P(1\\{x\_j=W\_j\\}) = E\[(1\\{x\_j=W\_j\\})\] = \\frac{1}{n} \\sum\_{i=1}^n 1\\{x\_j \\in w\_{ij}\\}$$
 We then calculate the expected number of green results, *G*, as
 
 $$G=\\sum\_{j=1}^5 P(1\\{x\_j=w\_{ij}\\})$$
-\#\# Combined Scoring & Vowel Omission
+## Combined Scoring & Vowel Omission
 
 Once we have calculated a *Y* and *G* score for a word, we can combine
 these two scores based on a given weight *t* to give us the combined
 score *C*
 
-*C* = *t**G* + (1 − *t*)*Y*
+*C* = *t**G* + (1−*t*)*Y*
 
 Of note with the C score is to remember that we do discredit green
 results when searching for yellow results. A yellow letter and a green
@@ -140,25 +140,25 @@ words in the short list.
 <tr class="odd">
 <td style="text-align: left;">arose</td>
 <td style="text-align: right;">1.883</td>
-<td style="text-align: left;">aesir</td>
+<td style="text-align: left;">reais</td>
 <td style="text-align: right;">1.915</td>
 <td style="text-align: left;">arose</td>
 <td style="text-align: right;">1.943</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">aesir</td>
-<td style="text-align: right;">1.865</td>
-<td style="text-align: left;">reais</td>
-<td style="text-align: right;">1.915</td>
-<td style="text-align: left;">aesir</td>
-<td style="text-align: right;">1.915</td>
-</tr>
-<tr class="odd">
 <td style="text-align: left;">reais</td>
 <td style="text-align: right;">1.865</td>
 <td style="text-align: left;">serai</td>
 <td style="text-align: right;">1.915</td>
 <td style="text-align: left;">reais</td>
+<td style="text-align: right;">1.915</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">raise</td>
+<td style="text-align: right;">1.865</td>
+<td style="text-align: left;">aesir</td>
+<td style="text-align: right;">1.915</td>
+<td style="text-align: left;">serai</td>
 <td style="text-align: right;">1.915</td>
 </tr>
 </tbody>
@@ -203,19 +203,19 @@ words in the short list.
 <td style="text-align: right;">1.287</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">rotls</td>
+<td style="text-align: left;">tirls</td>
 <td style="text-align: right;">1.202</td>
-<td style="text-align: left;">rotls</td>
+<td style="text-align: left;">tirls</td>
 <td style="text-align: right;">1.241</td>
-<td style="text-align: left;">rotls</td>
+<td style="text-align: left;">tirls</td>
 <td style="text-align: right;">1.241</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">slart</td>
+<td style="text-align: left;">rotls</td>
 <td style="text-align: right;">1.202</td>
-<td style="text-align: left;">slart</td>
+<td style="text-align: left;">rotls</td>
 <td style="text-align: right;">1.241</td>
-<td style="text-align: left;">slart</td>
+<td style="text-align: left;">rotls</td>
 <td style="text-align: right;">1.241</td>
 </tr>
 </tbody>
