@@ -20,15 +20,15 @@ library(tidyverse)
 library(mosaic)
 library(kableExtra)
 
-Full_WordSet = read.csv("../Data/Words5_WordSet.csv")
-Short_WordSet = read.csv("../Data/SGB_Words_WordSet.csv")
+Full_WordSet = read.csv("../Data/Combo_Long_WordSet.csv")
+Short_WordSet = read.csv("../Data/Allowed_WordSet.csv")
 
-Full_LetterInfo = read.csv("../Data/Words5_LetterInfo.csv")
-Short_LetterInfo = read.csv("../Data/SGB_Words_LetterInfo.csv")
+Full_LetterInfo = read.csv("../Data/Combo_Long_LetterInfo.csv")
+Short_LetterInfo = read.csv("../Data/Allowed_LetterInfo.csv")
 
-Full_Score = read.csv("../Data/Words5_Score.csv")
-Short_Score = read.csv("../Data/SGB_Words_Score.csv")
-Full_On_Short_Score = read.csv("../Data/Words5_On_SGB_Score.csv")
+Full_Score = read.csv("../Data/Combo_Long_Score.csv")
+Short_Score = read.csv("../Data/Allowed_Score.csv")
+Full_On_Short_Score = read.csv("../Data/Long_on_Allowed_Score.csv")
 ```
 
 ```{r ResultLists, echo=F}
@@ -111,7 +111,7 @@ This provides you with the choice: do you want to get as many yellow letters or 
 
 # On Judgement
 
-In order to do this, we are going to use two different sets of words to treat as our "potential guesses" for the game. We have a large list (`r nrow(Full_WordSet)` words) of all 5 letter words in the English language. This is *technically* the full breadth of possible words in Wordle, but it includes words like "aalii" (a type of bush found in Hawaii) and "ganch" (to execute via impaling) in the list. While these are possible, they are not particularly likely to show up. To account for this, we also have a list of commonly used words (`r nrow(Short_WordSet)`. We will use both the full short word lists to judge our results.
+In order to do this, we are going to use two different sets of words to treat as our "potential guesses" for the game. We have a large list (`r nrow(Full_WordSet)` words) of almost all 5 letter words in the English language. This is *technically* the full breadth of possible words in Wordle, but it includes words like "aalii" (a type of bush found in Hawaii) and "ganch" (to execute via impaling) in the list. While these are possible to enter, they are not particularly likely to show up. To account for this, we also have a list of Wordle-allowed words (`r nrow(Short_WordSet)`. We will use both the full short word lists to judge our results.
 
 This will yield a set of results for each strategy: results when our scope is *all* words and results when our scope is *likely* words. This is four combinations of possible results:
 

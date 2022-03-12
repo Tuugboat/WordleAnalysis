@@ -130,7 +130,7 @@ toc()
 tic("Write")
 
 write.csv(Full_on_Full_Score, here("Data/Combo_Long_Score.csv"), row.names=FALSE)
-write.csv(Short_on_Short_Score, here("Data/Allow_Score.csv"), row.names=FALSE)
-write.csv(Full_on_Short_Score, here("Data/Long_On_Allow_Score.csv"), row.names=FALSE)
+write.csv(Short_on_Short_Score, here("Data/Allowed_Score.csv"), row.names=FALSE)
+write.csv(Full_on_Short_Score, here("Data/Long_On_Allowed_Score.csv"), row.names=FALSE)
 
 toc()
