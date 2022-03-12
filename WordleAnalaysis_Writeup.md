@@ -98,16 +98,17 @@ vowel-omitted score.
 
 # Results
 
-The fun stuff!
+The fun stuff! All of these tables share a common format: three sets of
+three columns. The first set of three is the long list, judged on the
+long list. The second set is the short list, judged on the short list.
+The last set is the long list, judged on the short list. Likely, the
+columns of interest are the last three, since they give all possible
+guesses predicting any reasonable result. The tables show the top 5
+performers, where ties are broken by the other scores: ties in
+yellow-seeking scores are broken by their green-seeking performance and
+vice-versa.
 
 ## Letter-Seeking
-
-This is our Yellow-Maxing list, separated by scope of the guesses and
-scope of the possible words. The first set is our full list, judged on
-it’s ability to guess the words in the full list. The second set of
-three is the words in the short list, predicting the short list. The
-last set of three values is for the words in the full list, predicting
-words in the short list.
 
 <table>
 <thead>
@@ -222,9 +223,6 @@ words in the short list.
 </table>
 
 ## Position-Seeking
-
-This table follows the same logic, 3 triplets based on their scoring
-method.
 
 <table>
 <thead>
