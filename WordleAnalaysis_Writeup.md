@@ -112,7 +112,7 @@ words in the short list.
 <table>
 <thead>
 <tr class="header">
-<th style="text-align: left;">Word (FoS)</th>
+<th style="text-align: left;">Word (FoF)</th>
 <th style="text-align: right;">Y</th>
 <th style="text-align: left;">Word (SoS)</th>
 <th style="text-align: right;">Y</th>
@@ -169,7 +169,7 @@ words in the short list.
 <table>
 <thead>
 <tr class="header">
-<th style="text-align: left;">Word (FoS)</th>
+<th style="text-align: left;">Word (FoF)</th>
 <th style="text-align: right;">Y</th>
 <th style="text-align: left;">Word (SoS)</th>
 <th style="text-align: right;">Y</th>
@@ -229,7 +229,7 @@ method.
 <table>
 <thead>
 <tr class="header">
-<th style="text-align: left;">Word (FoS)</th>
+<th style="text-align: left;">Word (FoF)</th>
 <th style="text-align: right;">G</th>
 <th style="text-align: left;">Word (SoS)</th>
 <th style="text-align: right;">G</th>
@@ -286,7 +286,7 @@ method.
 <table>
 <thead>
 <tr class="header">
-<th style="text-align: left;">Word (FoS)</th>
+<th style="text-align: left;">Word (FoF)</th>
 <th style="text-align: right;">G</th>
 <th style="text-align: left;">Word (SoS)</th>
 <th style="text-align: right;">G</th>
@@ -345,7 +345,7 @@ Here is the combined values for *t* = 0.75.
 <table>
 <thead>
 <tr class="header">
-<th style="text-align: left;">Word (FoS)</th>
+<th style="text-align: left;">Word (FoF)</th>
 <th style="text-align: right;">C</th>
 <th style="text-align: left;">Word (SoS)</th>
 <th style="text-align: right;">C</th>
@@ -402,7 +402,7 @@ Here is the combined values for *t* = 0.75.
 <table>
 <thead>
 <tr class="header">
-<th style="text-align: left;">Word (FoS)</th>
+<th style="text-align: left;">Word (FoF)</th>
 <th style="text-align: right;">C</th>
 <th style="text-align: left;">Word (SoS)</th>
 <th style="text-align: right;">C</th>

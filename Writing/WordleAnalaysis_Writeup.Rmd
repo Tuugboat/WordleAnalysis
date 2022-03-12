@@ -124,7 +124,7 @@ This is our Yellow-Maxing list, separated by scope of the guesses and scope of t
 ```{r Table_Y, echo=F}
 Y_Full = cbind(Y_FoF, Y_SoS, Y_FoS)
 Y_Full %>%
-  knitr::kable("simple", col.names=c("Word (FoS)", "Y", "Word (SoS)", "Y", "Word (FoS)", "Y")) %>%
+  knitr::kable("simple", col.names=c("Word (FoF)", "Y", "Word (SoS)", "Y", "Word (FoS)", "Y")) %>%
   kable_material(c("striped", "hover"))
 ```
 
@@ -133,7 +133,7 @@ Y_Full %>%
 ```{r Table_Y_Cons, echo=F}
 Y_Full_Cons = cbind(Y_FoF_Cons, Y_SoS_Cons, Y_FoS_Cons)
 Y_Full_Cons %>%
-  knitr::kable("simple", col.names=c("Word (FoS)", "Y", "Word (SoS)", "Y", "Word (FoS)", "Y")) %>%
+  knitr::kable("simple", col.names=c("Word (FoF)", "Y", "Word (SoS)", "Y", "Word (FoS)", "Y")) %>%
   kable_material(c("striped", "hover"))
 
 ```
@@ -144,7 +144,7 @@ This table follows the same logic, 3 triplets based on their scoring method.
 ```{r Table_G, echo=F}
 G_Full = cbind(G_FoF, G_SoS, G_FoS)
 G_Full %>%
-  knitr::kable("simple", col.names=c("Word (FoS)", "G", "Word (SoS)", "G", "Word (FoS)", "G")) %>%
+  knitr::kable("simple", col.names=c("Word (FoF)", "G", "Word (SoS)", "G", "Word (FoS)", "G")) %>%
   kable_material(c("striped", "hover"))
 ```
 
@@ -153,7 +153,7 @@ G_Full %>%
 ```{r Table_G_Cons, echo=F}
 G_Full_Cons = cbind(G_FoF_Cons, G_SoS_Cons, G_FoS_Cons)
 G_Full_Cons %>%
-  knitr::kable("simple", col.names=c("Word (FoS)", "G", "Word (SoS)", "G", "Word (FoS)", "G")) %>%
+  knitr::kable("simple", col.names=c("Word (FoF)", "G", "Word (SoS)", "G", "Word (FoS)", "G")) %>%
   kable_material(c("striped", "hover"))
 ```
 
@@ -164,7 +164,7 @@ Here is the combined values for $t=0.75$.
 ```{r Table_C, echo=F}
 C_Full = cbind(C_FoF, C_SoS, C_FoS)
 C_Full %>%
-  knitr::kable("simple", col.names=c("Word (FoS)", "C", "Word (SoS)", "C", "Word (FoS)", "C")) %>%
+  knitr::kable("simple", col.names=c("Word (FoF)", "C", "Word (SoS)", "C", "Word (FoS)", "C")) %>%
   kable_material(c("striped", "hover"))
 ```
 
@@ -174,7 +174,7 @@ C_Full %>%
 ```{r Table_C_Cons, echo=F}
 C_Full_Cons = cbind(C_FoF_Cons, C_SoS_Cons, C_FoS_Cons)
 C_Full_Cons %>%
-  knitr::kable("simple", col.names=c("Word (FoS)", "C", "Word (SoS)", "C", "Word (FoS)", "C")) %>%
+  knitr::kable("simple", col.names=c("Word (FoF)", "C", "Word (SoS)", "C", "Word (FoS)", "C")) %>%
   kable_material(c("striped", "hover"))
 ```
 
