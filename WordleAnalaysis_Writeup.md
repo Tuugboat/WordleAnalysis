@@ -49,14 +49,13 @@ a common word, but a possible result is *any* word.
 
 We make the simple observation that
 
-$P(1\\{x \\in W\\}) = E\[1\\{x \\in W\\}\] = \\frac{1}{n} \\sum\_{i=1}^n 1\\{x \\in w\_i\\}$
-
+$$P(1\\{x \\in W\\}) = E\[1\\{x \\in W\\}\] = \\frac{1}{n} \\sum\_{i=1}^n 1\\{x \\in w\_i\\}$$
 Where *x* is a given letter, *W* is a random word and *w*<sub>*i*</sub>
 is a specific word within our target sample. We then calculate
 *P*(1{*x*∈*W*}) for each unique letter in a word a form the expected
 yellow results, *Y* as
 
-$Y=\\sum\_{j=1}^uP(1\\{x\_j\\in W\\})$
+$$Y=\\sum\_{j=1}^uP(1\\{x\_j\\in W\\})$$
 
 where the subscript *j* denotes a specific letter and *u* is the number
 of unique letters in that word. This gives us the expected number of
@@ -69,7 +68,7 @@ This is largely similiar to letter hunting, but instead of being
 concerned with *P*(1{*x*∈*W*}) we now need to calculate the letter being
 in the correct spot, which is given by
 
-$P(1\\{x\_j=W\_j\\}) = E\[(1\\{x\_j=W\_j\\})\] = \\frac{1}{n} \\sum\_{i=1}^n 1\\{x\_j \\in w\_{ij}\\}$
+$$P(1\\{x\_j=W\_j\\}) = E\[(1\\{x\_j=W\_j\\})\] = \\frac{1}{n} \\sum\_{i=1}^n 1\\{x\_j \\in w\_{ij}\\}$$
 We then calculate the expected number of green results, *G*, as
 
 $$G=\\sum\_{j=1}^5 P(1\\{x\_j=w\_{ij}\\})$$
