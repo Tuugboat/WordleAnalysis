@@ -102,279 +102,414 @@ The fun stuff!
 
 ## Letter-Seeking
 
-This is our Yellow-Maxing list, seperated by scope of the guesses and
-scope of the possible words.
-
-### Full List judged on Full List
+This is our Yellow-Maxing list, separated by scope of the guesses and
+scope of the possible words. The first set is our full list, judged on
+it’s ability to guess the words in the full list. The second set of
+three is the words in the short list, predicting the short list. The
+last set of three values is for the words in the full list, predicting
+words in the short list.
 
 <table>
 <thead>
 <tr class="header">
-<th style="text-align: left;">Word</th>
+<th style="text-align: left;">Word (FoS)</th>
 <th style="text-align: right;">Y</th>
-<th style="text-align: right;">Y (Consonants)</th>
-<th style="text-align: left;">Word</th>
+<th style="text-align: left;">Word (SoS)</th>
 <th style="text-align: right;">Y</th>
-<th style="text-align: right;">Y (Consonants)</th>
-<th style="text-align: left;">Word</th>
+<th style="text-align: left;">Word (FoS)</th>
 <th style="text-align: right;">Y</th>
-<th style="text-align: right;">Y (Consonants)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">arose</td>
 <td style="text-align: right;">1.773</td>
-<td style="text-align: right;">0.596</td>
 <td style="text-align: left;">arose</td>
 <td style="text-align: right;">1.909</td>
-<td style="text-align: right;">0.777</td>
 <td style="text-align: left;">arose</td>
 <td style="text-align: right;">1.909</td>
-<td style="text-align: right;">0.777</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">orate</td>
 <td style="text-align: right;">1.771</td>
-<td style="text-align: right;">0.594</td>
 <td style="text-align: left;">raise</td>
 <td style="text-align: right;">1.884</td>
-<td style="text-align: right;">0.777</td>
 <td style="text-align: left;">arise</td>
 <td style="text-align: right;">1.884</td>
-<td style="text-align: right;">0.777</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">arise</td>
 <td style="text-align: right;">1.769</td>
-<td style="text-align: right;">0.596</td>
 <td style="text-align: left;">arise</td>
 <td style="text-align: right;">1.884</td>
-<td style="text-align: right;">0.777</td>
 <td style="text-align: left;">raise</td>
 <td style="text-align: right;">1.884</td>
-<td style="text-align: right;">0.777</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">raise</td>
 <td style="text-align: right;">1.769</td>
-<td style="text-align: right;">0.596</td>
 <td style="text-align: left;">tears</td>
 <td style="text-align: right;">1.871</td>
-<td style="text-align: right;">1.031</td>
 <td style="text-align: left;">serai</td>
 <td style="text-align: right;">1.884</td>
-<td style="text-align: right;">0.777</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">serai</td>
 <td style="text-align: right;">1.769</td>
-<td style="text-align: right;">0.596</td>
 <td style="text-align: left;">rates</td>
 <td style="text-align: right;">1.871</td>
-<td style="text-align: right;">1.031</td>
 <td style="text-align: left;">aster</td>
 <td style="text-align: right;">1.871</td>
-<td style="text-align: right;">1.031</td>
 </tr>
 </tbody>
 </table>
 
-### Short List judge on Short List
+### Consonants
 
 <table>
 <thead>
 <tr class="header">
-<th style="text-align: left;">Word</th>
+<th style="text-align: left;">Word (FoS)</th>
 <th style="text-align: right;">Y</th>
-<th style="text-align: right;">Y (Consonants)</th>
+<th style="text-align: left;">Word (SoS)</th>
+<th style="text-align: right;">Y</th>
+<th style="text-align: left;">Word (FoS)</th>
+<th style="text-align: right;">Y</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">arose</td>
-<td style="text-align: right;">1.909</td>
-<td style="text-align: right;">0.777</td>
+<td style="text-align: left;">slart</td>
+<td style="text-align: right;">1.112</td>
+<td style="text-align: left;">turns</td>
+<td style="text-align: right;">1.242</td>
+<td style="text-align: left;">slart</td>
+<td style="text-align: right;">1.280</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">raise</td>
-<td style="text-align: right;">1.884</td>
-<td style="text-align: right;">0.777</td>
+<td style="text-align: left;">slirt</td>
+<td style="text-align: right;">1.112</td>
+<td style="text-align: left;">stern</td>
+<td style="text-align: right;">1.242</td>
+<td style="text-align: left;">slirt</td>
+<td style="text-align: right;">1.280</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">arise</td>
-<td style="text-align: right;">1.884</td>
-<td style="text-align: right;">0.777</td>
+<td style="text-align: left;">snirt</td>
+<td style="text-align: right;">1.097</td>
+<td style="text-align: left;">rents</td>
+<td style="text-align: right;">1.242</td>
+<td style="text-align: left;">snirt</td>
+<td style="text-align: right;">1.242</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">tears</td>
-<td style="text-align: right;">1.871</td>
-<td style="text-align: right;">1.031</td>
+<td style="text-align: left;">snort</td>
+<td style="text-align: right;">1.097</td>
+<td style="text-align: left;">snort</td>
+<td style="text-align: right;">1.242</td>
+<td style="text-align: left;">snort</td>
+<td style="text-align: right;">1.242</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">rates</td>
-<td style="text-align: right;">1.871</td>
-<td style="text-align: right;">1.031</td>
+<td style="text-align: left;">snurt</td>
+<td style="text-align: right;">1.097</td>
+<td style="text-align: left;">runts</td>
+<td style="text-align: right;">1.242</td>
+<td style="text-align: left;">snurt</td>
+<td style="text-align: right;">1.242</td>
 </tr>
 </tbody>
 </table>
 
-### Full List judged on Short List
+## Position-Seeking
+
+This table follows the same logic, 3 triplets based on their scoring
+method.
 
 <table>
 <thead>
 <tr class="header">
-<th style="text-align: left;">Word</th>
-<th style="text-align: right;">Y</th>
-<th style="text-align: right;">Y (Consonants)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">arose</td>
-<td style="text-align: right;">1.909</td>
-<td style="text-align: right;">0.777</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">arise</td>
-<td style="text-align: right;">1.884</td>
-<td style="text-align: right;">0.777</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">raise</td>
-<td style="text-align: right;">1.884</td>
-<td style="text-align: right;">0.777</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">serai</td>
-<td style="text-align: right;">1.884</td>
-<td style="text-align: right;">0.777</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">aster</td>
-<td style="text-align: right;">1.871</td>
-<td style="text-align: right;">1.031</td>
-</tr>
-</tbody>
-</table>
-
-## Position Seeking
-
-Green-Maxing yields the following sets:
-
-### Full List judged on Full List
-
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Word</th>
+<th style="text-align: left;">Word (FoS)</th>
 <th style="text-align: right;">G</th>
-<th style="text-align: right;">G (Consonants)</th>
+<th style="text-align: left;">Word (SoS)</th>
+<th style="text-align: right;">G</th>
+<th style="text-align: left;">Word (FoS)</th>
+<th style="text-align: right;">G</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">soree</td>
 <td style="text-align: right;">0.651</td>
-<td style="text-align: right;">0.228</td>
+<td style="text-align: left;">sores</td>
+<td style="text-align: right;">0.886</td>
+<td style="text-align: left;">soles</td>
+<td style="text-align: right;">0.870</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">salay</td>
 <td style="text-align: right;">0.607</td>
-<td style="text-align: right;">0.339</td>
+<td style="text-align: left;">sales</td>
+<td style="text-align: right;">0.874</td>
+<td style="text-align: left;">cones</td>
+<td style="text-align: right;">0.825</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">boree</td>
 <td style="text-align: right;">0.592</td>
-<td style="text-align: right;">0.169</td>
+<td style="text-align: left;">soles</td>
+<td style="text-align: right;">0.870</td>
+<td style="text-align: left;">sures</td>
+<td style="text-align: right;">0.820</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">sairy</td>
 <td style="text-align: right;">0.586</td>
-<td style="text-align: right;">0.338</td>
+<td style="text-align: left;">sates</td>
+<td style="text-align: right;">0.855</td>
+<td style="text-align: left;">tales</td>
+<td style="text-align: right;">0.813</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">saily</td>
 <td style="text-align: right;">0.586</td>
-<td style="text-align: right;">0.338</td>
-</tr>
-</tbody>
-</table>
-
-### Short List judge on Short List
-
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Word</th>
-<th style="text-align: right;">G</th>
-<th style="text-align: right;">G (Consonants)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">sores</td>
-<td style="text-align: right;">0.886</td>
-<td style="text-align: right;">0.514</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">sales</td>
-<td style="text-align: right;">0.874</td>
-<td style="text-align: right;">0.499</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">soles</td>
-<td style="text-align: right;">0.870</td>
-<td style="text-align: right;">0.499</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">sates</td>
-<td style="text-align: right;">0.855</td>
-<td style="text-align: right;">0.480</td>
-</tr>
-<tr class="odd">
 <td style="text-align: left;">sires</td>
 <td style="text-align: right;">0.844</td>
-<td style="text-align: right;">0.514</td>
+<td style="text-align: left;">mores</td>
+<td style="text-align: right;">0.812</td>
 </tr>
 </tbody>
 </table>
 
-### Full List judged on Short List
+### Consonants
 
 <table>
 <thead>
 <tr class="header">
-<th style="text-align: left;">Word</th>
+<th style="text-align: left;">Word (FoS)</th>
 <th style="text-align: right;">G</th>
-<th style="text-align: right;">G (Consonants)</th>
+<th style="text-align: left;">Word (SoS)</th>
+<th style="text-align: right;">G</th>
+<th style="text-align: left;">Word (FoS)</th>
+<th style="text-align: right;">G</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
+<td style="text-align: left;">serry</td>
+<td style="text-align: right;">0.433</td>
+<td style="text-align: left;">sorts</td>
+<td style="text-align: right;">0.592</td>
+<td style="text-align: left;">carls</td>
+<td style="text-align: right;">0.528</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">sorry</td>
+<td style="text-align: right;">0.433</td>
+<td style="text-align: left;">salts</td>
+<td style="text-align: right;">0.577</td>
+<td style="text-align: left;">slops</td>
+<td style="text-align: right;">0.528</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">surly</td>
+<td style="text-align: right;">0.433</td>
+<td style="text-align: left;">silts</td>
+<td style="text-align: right;">0.577</td>
+<td style="text-align: left;">pants</td>
+<td style="text-align: right;">0.522</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">sorty</td>
+<td style="text-align: right;">0.429</td>
+<td style="text-align: left;">slits</td>
+<td style="text-align: right;">0.572</td>
+<td style="text-align: left;">turns</td>
+<td style="text-align: right;">0.521</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">slyly</td>
+<td style="text-align: right;">0.411</td>
+<td style="text-align: left;">slots</td>
+<td style="text-align: right;">0.572</td>
+<td style="text-align: left;">darts</td>
+<td style="text-align: right;">0.520</td>
+</tr>
+</tbody>
+</table>
+
+## Combined Weighting
+
+Here is the combined values for *t* = 0.75.
+
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Word (FoS)</th>
+<th style="text-align: right;">C</th>
+<th style="text-align: left;">Word (SoS)</th>
+<th style="text-align: right;">C</th>
+<th style="text-align: left;">Word (FoS)</th>
+<th style="text-align: right;">C</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">arose</td>
+<td style="text-align: right;">0.774</td>
+<td style="text-align: left;">arose</td>
+<td style="text-align: right;">0.749</td>
+<td style="text-align: left;">arose</td>
+<td style="text-align: right;">0.749</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">orate</td>
+<td style="text-align: right;">0.748</td>
+<td style="text-align: left;">raise</td>
+<td style="text-align: right;">0.805</td>
+<td style="text-align: left;">arise</td>
+<td style="text-align: right;">0.747</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">arise</td>
+<td style="text-align: right;">0.773</td>
+<td style="text-align: left;">arise</td>
+<td style="text-align: right;">0.747</td>
+<td style="text-align: left;">raise</td>
+<td style="text-align: right;">0.805</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">raise</td>
+<td style="text-align: right;">0.815</td>
+<td style="text-align: left;">tears</td>
+<td style="text-align: right;">0.951</td>
+<td style="text-align: left;">serai</td>
+<td style="text-align: right;">0.763</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">serai</td>
+<td style="text-align: right;">0.799</td>
+<td style="text-align: left;">rates</td>
+<td style="text-align: right;">1.050</td>
+<td style="text-align: left;">aster</td>
+<td style="text-align: right;">0.760</td>
+</tr>
+</tbody>
+</table>
+
+### Consonants
+
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Word (FoS)</th>
+<th style="text-align: right;">C</th>
+<th style="text-align: left;">Word (SoS)</th>
+<th style="text-align: right;">C</th>
+<th style="text-align: left;">Word (FoS)</th>
+<th style="text-align: right;">C</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">surly</td>
+<td style="text-align: right;">0.584</td>
+<td style="text-align: left;">carts</td>
+<td style="text-align: right;">0.704</td>
+<td style="text-align: left;">turns</td>
+<td style="text-align: right;">0.701</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">sorty</td>
+<td style="text-align: right;">0.582</td>
+<td style="text-align: left;">crits</td>
+<td style="text-align: right;">0.702</td>
+<td style="text-align: left;">darts</td>
+<td style="text-align: right;">0.695</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">stray</td>
+<td style="text-align: right;">0.560</td>
+<td style="text-align: left;">sorts</td>
+<td style="text-align: right;">0.701</td>
+<td style="text-align: left;">dorts</td>
+<td style="text-align: right;">0.695</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">strey</td>
+<td style="text-align: right;">0.560</td>
+<td style="text-align: left;">turns</td>
+<td style="text-align: right;">0.701</td>
+<td style="text-align: left;">carls</td>
+<td style="text-align: right;">0.692</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">stroy</td>
+<td style="text-align: right;">0.560</td>
+<td style="text-align: left;">terns</td>
+<td style="text-align: right;">0.701</td>
+<td style="text-align: left;">grits</td>
+<td style="text-align: right;">0.669</td>
+</tr>
+</tbody>
+</table>
+
+# Conclusion
+
+So, depending on your and desired strategy, one of the words from the
+following table is certainly the best option. Based purely on
+estimation, it is likely that the consonant-filtered long-on-short
+combined score is the most efficient word to pick, but doing this hinges
+on a balanced strategy and considering words that are not commonly used
+which minimizes your chances of having a *correct* first guess. By
+picking the combined-score short-on-short word, you alternatively
+maximize your chance of having a correct first guess.
+
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th style="text-align: left;">Y</th>
+<th style="text-align: left;">G</th>
+<th style="text-align: left;">C</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Full on Full</td>
+<td style="text-align: left;">arose</td>
+<td style="text-align: left;">soree</td>
+<td style="text-align: left;">tarie</td>
+</tr>
+<tr class="even">
+<td>… Consonants</td>
+<td style="text-align: left;">slart</td>
+<td style="text-align: left;">serry</td>
+<td style="text-align: left;">surly</td>
+</tr>
+<tr class="odd">
+<td>Short on Short</td>
+<td style="text-align: left;">arose</td>
+<td style="text-align: left;">sores</td>
+<td style="text-align: left;">tares</td>
+</tr>
+<tr class="even">
+<td>… Consonants</td>
+<td style="text-align: left;">turns</td>
+<td style="text-align: left;">sorts</td>
+<td style="text-align: left;">carts</td>
+</tr>
+<tr class="odd">
+<td>Full on Short</td>
+<td style="text-align: left;">arose</td>
 <td style="text-align: left;">soles</td>
-<td style="text-align: right;">0.870</td>
-<td style="text-align: right;">0.499</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">cones</td>
-<td style="text-align: right;">0.825</td>
-<td style="text-align: right;">0.454</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">sures</td>
-<td style="text-align: right;">0.820</td>
-<td style="text-align: right;">0.514</td>
-</tr>
-<tr class="even">
 <td style="text-align: left;">tales</td>
-<td style="text-align: right;">0.813</td>
-<td style="text-align: right;">0.439</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">mores</td>
-<td style="text-align: right;">0.812</td>
-<td style="text-align: right;">0.440</td>
+<tr class="even">
+<td>… Consonants</td>
+<td style="text-align: left;">slart</td>
+<td style="text-align: left;">carls</td>
+<td style="text-align: left;">turns</td>
 </tr>
 </tbody>
 </table>
