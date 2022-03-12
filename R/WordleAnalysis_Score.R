@@ -108,11 +108,11 @@ return(WordSet)
 }
 
 tic("Read")
-Full_WordSet = read.csv(here("Data/Words5_WordSet.csv"))
-Short_WordSet = read.csv(here("Data/SGB_Words_WordSet.csv"))
+Full_WordSet = read.csv(here("Data/Combo_Long_WordSet.csv"))
+Short_WordSet = read.csv(here("Data/Allowed_WordSet.csv"))
 
-Full_LetterInfo = read.csv(here("Data/Words5_LetterInfo.csv"))
-Short_LetterInfo = read.csv(here("Data/SGB_Words_LetterInfo.csv"))
+Full_LetterInfo = read.csv(here("Data/Combo_Long_LetterInfo.csv"))
+Short_LetterInfo = read.csv(here("Data/Allowed_LetterInfo.csv"))
 toc()
 
 tic("Full")
@@ -134,7 +134,3 @@ write.csv(Short_on_Short_Score, here("Data/SGB_Words_Score.csv"), row.names=FALS
 write.csv(Full_on_Short_Score, here("Data/Words5_On_SGB_Score.csv"), row.names=FALSE)
 
 toc()
-
-
-#Y = for each letter in unique letters %>% split, E+=(match-1)/nwords
-#G = for each Letter in LetterPos_* = sum(LetterPos_*==Letter)

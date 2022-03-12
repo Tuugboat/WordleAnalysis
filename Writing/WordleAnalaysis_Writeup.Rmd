@@ -31,6 +31,72 @@ Short_Score = read.csv("../Data/SGB_Words_Score.csv")
 Full_On_Short_Score = read.csv("../Data/Words5_On_SGB_Score.csv")
 ```
 
+```{r ResultLists, echo=F}
+#Individual Table Data --------------------------------------------------------------
+Y_FoF = Full_Score %>% arrange(desc(Y)) %>% head(5) %>% select(Word, Y) %>% mutate(Y=round(Y, 3))
+Y_SoS = Short_Score %>% arrange(desc(Y)) %>% head(5) %>% select(Word, Y) %>% mutate(Y=round(Y, 3))
+Y_FoS = Full_On_Short_Score %>% arrange(desc(Y)) %>% head(5) %>% select(Word, Y) %>% mutate(Y=round(Y, 3))
+
+Y_FoF_Cons = Full_Score %>% arrange(desc(Y_Cons)) %>% head(5) %>% select(Word, Y_Cons) %>% mutate(Y_Cons=round(Y_Cons, 3))
+Y_SoS_Cons = Short_Score %>% arrange(desc(Y_Cons)) %>% head(5) %>% select(Word, Y_Cons) %>% mutate(Y_Cons=round(Y_Cons, 3))
+Y_FoS_Cons = Full_On_Short_Score %>% arrange(desc(Y_Cons)) %>% head(5) %>% select(Word, Y_Cons) %>% mutate(Y_Cons=round(Y_Cons, 3))
+
+G_FoF = Full_Score %>% arrange(desc(G)) %>% head(5) %>% select(Word, G) %>% mutate(G=round(G, 3))
+G_SoS = Short_Score %>% arrange(desc(G)) %>% head(5) %>% select(Word, G) %>% mutate(G=round(G, 3))
+G_FoS = Full_On_Short_Score %>% arrange(desc(G)) %>% head(5) %>% select(Word, G) %>% mutate(G=round(G, 3))
+
+G_FoF_Cons = Full_Score %>% arrange(desc(G_Cons)) %>% head(5) %>% select(Word, G_Cons) %>% mutate(G_Cons=round(G_Cons, 3))
+G_SoS_Cons = Short_Score %>% arrange(desc(G_Cons)) %>% head(5) %>% select(Word, G_Cons) %>% mutate(G_Cons=round(G_Cons, 3))
+G_FoS_Cons = Full_On_Short_Score %>% arrange(desc(G_Cons)) %>% head(5) %>% select(Word, G_Cons) %>% mutate(G_Cons=round(G_Cons, 3))
+
+C_FoF = Full_Score %>% arrange(desc(Y)) %>% head(5) %>% select(Word, C) %>% mutate(C=round(C, 3))
+C_SoS = Short_Score %>% arrange(desc(Y)) %>% head(5) %>% select(Word, C) %>% mutate(C=round(C, 3))
+C_FoS = Full_On_Short_Score %>% arrange(desc(Y)) %>% head(5) %>% select(Word, C) %>% mutate(C=round(C, 3))
+
+C_FoF_Cons = Full_Score %>% arrange(desc(C_Cons)) %>% head(5) %>% select(Word, C_Cons) %>% mutate(C_Cons=round(C_Cons, 3))
+C_SoS_Cons = Short_Score %>% arrange(desc(C_Cons)) %>% head(5) %>% select(Word, C_Cons) %>% mutate(C_Cons=round(C_Cons, 3))
+C_FoS_Cons = Full_On_Short_Score %>% arrange(desc(C_Cons)) %>% head(5) %>% select(Word, C_Cons) %>% mutate(C_Cons=round(C_Cons, 3))
+
+#Table of only top words (Assembled one at a time) -----------------------------------------------------------
+
+Y_FoF_Top = Full_Score %>% arrange(desc(Y)) %>% head(1) %>% pull(Word)
+Y_FoF_Top_Cons = Full_Score %>% arrange(desc(Y_Cons)) %>% head(1) %>% pull(Word)
+
+Y_SoS_Top = Short_Score %>% arrange(desc(Y)) %>% head(1) %>% pull(Word)
+Y_SoS_Top_Cons = Short_Score %>% arrange(desc(Y_Cons)) %>% head(1) %>% pull(Word)
+
+Y_FoS_Top = Full_On_Short_Score %>% arrange(desc(Y)) %>% head(1) %>% pull(Word)
+Y_FoS_Top_Cons = Full_On_Short_Score %>% arrange(desc(Y_Cons)) %>% head(1) %>% pull(Word)
+
+G_FoF_Top = Full_Score %>% arrange(desc(G)) %>% head(1) %>% pull(Word)
+G_FoF_Top_Cons = Full_Score %>% arrange(desc(G_Cons)) %>% head(1) %>% pull(Word)
+
+G_SoS_Top = Short_Score %>% arrange(desc(G)) %>% head(1) %>% pull(Word)
+G_SoS_Top_Cons = Short_Score %>% arrange(desc(G_Cons)) %>% head(1) %>% pull(Word)
+
+G_FoS_Top = Full_On_Short_Score %>% arrange(desc(G)) %>% head(1) %>% pull(Word)
+G_FoS_Top_Cons = Full_On_Short_Score %>% arrange(desc(G_Cons)) %>% head(1) %>% pull(Word)
+
+C_FoF_Top = Full_Score %>% arrange(desc(C)) %>% head(1) %>% pull(Word)
+C_FoF_Top_Cons = Full_Score %>% arrange(desc(C_Cons)) %>% head(1) %>% pull(Word)
+
+C_SoS_Top = Short_Score %>% arrange(desc(C)) %>% head(1) %>% pull(Word)
+C_SoS_Top_Cons = Short_Score %>% arrange(desc(C_Cons)) %>% head(1) %>% pull(Word)
+
+C_FoS_Top = Full_On_Short_Score %>% arrange(desc(C)) %>% head(1) %>% pull(Word)
+C_FoS_Top_Cons = Full_On_Short_Score %>% arrange(desc(C_Cons)) %>% head(1) %>% pull(Word)
+
+#Assembling the data into a matrix
+FullTable = rbind(c(Y=Y_FoF_Top, G=G_FoF_Top, C=C_FoF_Top),
+                  c(Y=Y_FoF_Top_Cons, G=G_FoF_Top_Cons, C=C_FoF_Top_Cons),
+                  c(Y=Y_SoS_Top, G=G_SoS_Top, C=C_SoS_Top),
+                  c(Y=Y_SoS_Top_Cons, G=G_SoS_Top_Cons, C=C_SoS_Top_Cons),
+                  c(Y=Y_FoS_Top, G=G_FoS_Top, C=C_FoS_Top),
+                  c(Y=Y_FoS_Top_Cons, G=G_FoS_Top_Cons, C=C_FoS_Top_Cons))
+rownames(FullTable) <- c("Full on Full", "... Consonants", "Short on Short", "... Consonants", "Full on Short", "... Consonants")
+
+```
+
 # Introduction
 
 The first guess for a WordleWord is an interesting microcosm of arbitrary, hyper-optimizable strategy decisions. One of the interesting catches of Wordle as a whole is trying to work through the results that you obtain throughout your guesses. The first word is unique: much like a chess opening, the game hasn't shaped up. Here, we will attempt to provide a small selection of "best first words" for a number of different strategies:
@@ -90,32 +156,6 @@ Finally, we can reconsider the $Y$, $G$, and $C$ values but ignore the vowels wh
 
 The fun stuff!
 
-```{r ResultLists, echo=F}
-Y_FoF = Full_Score %>% arrange(desc(Y)) %>% head(5) %>% select(Word, Y) %>% mutate(Y=round(Y, 3))
-Y_SoS = Short_Score %>% arrange(desc(Y)) %>% head(5) %>% select(Word, Y) %>% mutate(Y=round(Y, 3))
-Y_FoS = Full_On_Short_Score %>% arrange(desc(Y)) %>% head(5) %>% select(Word, Y) %>% mutate(Y=round(Y, 3))
-
-Y_FoF_Cons = Full_Score %>% arrange(desc(Y_Cons)) %>% head(5) %>% select(Word, Y_Cons) %>% mutate(Y_Cons=round(Y_Cons, 3))
-Y_SoS_Cons = Short_Score %>% arrange(desc(Y_Cons)) %>% head(5) %>% select(Word, Y_Cons) %>% mutate(Y_Cons=round(Y_Cons, 3))
-Y_FoS_Cons = Full_On_Short_Score %>% arrange(desc(Y_Cons)) %>% head(5) %>% select(Word, Y_Cons) %>% mutate(Y_Cons=round(Y_Cons, 3))
-
-G_FoF = Full_Score %>% arrange(desc(G)) %>% head(5) %>% select(Word, G) %>% mutate(G=round(G, 3))
-G_SoS = Short_Score %>% arrange(desc(G)) %>% head(5) %>% select(Word, G) %>% mutate(G=round(G, 3))
-G_FoS = Full_On_Short_Score %>% arrange(desc(G)) %>% head(5) %>% select(Word, G) %>% mutate(G=round(G, 3))
-
-G_FoF_Cons = Full_Score %>% arrange(desc(G_Cons)) %>% head(5) %>% select(Word, G_Cons) %>% mutate(G_Cons=round(G_Cons, 3))
-G_SoS_Cons = Short_Score %>% arrange(desc(G_Cons)) %>% head(5) %>% select(Word, G_Cons) %>% mutate(G_Cons=round(G_Cons, 3))
-G_FoS_Cons = Full_On_Short_Score %>% arrange(desc(G_Cons)) %>% head(5) %>% select(Word, G_Cons) %>% mutate(G_Cons=round(G_Cons, 3))
-
-C_FoF = Full_Score %>% arrange(desc(Y)) %>% head(5) %>% select(Word, C) %>% mutate(C=round(C, 3))
-C_SoS = Short_Score %>% arrange(desc(Y)) %>% head(5) %>% select(Word, C) %>% mutate(C=round(C, 3))
-C_FoS = Full_On_Short_Score %>% arrange(desc(Y)) %>% head(5) %>% select(Word, C) %>% mutate(C=round(C, 3))
-
-C_FoF_Cons = Full_Score %>% arrange(desc(C_Cons)) %>% head(5) %>% select(Word, C_Cons) %>% mutate(C_Cons=round(C_Cons, 3))
-C_SoS_Cons = Short_Score %>% arrange(desc(C_Cons)) %>% head(5) %>% select(Word, C_Cons) %>% mutate(C_Cons=round(C_Cons, 3))
-C_FoS_Cons = Full_On_Short_Score %>% arrange(desc(C_Cons)) %>% head(5) %>% select(Word, C_Cons) %>% mutate(C_Cons=round(C_Cons, 3))
-
-```
 
 ## Letter-Seeking
 This is our Yellow-Maxing list, separated by scope of the guesses and scope of the possible words. The first set is our full list, judged on it's ability to guess the words in the full list. The second set of three is the words in the short list, predicting the short list. The last set of three values is for the words in the full list, predicting words in the short list.
@@ -183,40 +223,6 @@ C_Full_Cons %>%
 So, depending on your and desired strategy, one of the words from the following table is certainly the best option. Based purely on estimation, it is likely that the consonant-filtered long-on-short combined score is the most efficient word to pick, but doing this hinges on a balanced strategy and considering words that are not commonly used which minimizes your chances of having a *correct* first guess. By picking the combined-score short-on-short word, you alternatively maximize your chance of having a correct first guess.
 
 ```{r FinalTable, echo=F}
-Y_FoF_Top = Full_Score %>% arrange(desc(Y)) %>% head(1) %>% pull(Word)
-Y_FoF_Top_Cons = Full_Score %>% arrange(desc(Y_Cons)) %>% head(1) %>% pull(Word)
-
-Y_SoS_Top = Short_Score %>% arrange(desc(Y)) %>% head(1) %>% pull(Word)
-Y_SoS_Top_Cons = Short_Score %>% arrange(desc(Y_Cons)) %>% head(1) %>% pull(Word)
-
-Y_FoS_Top = Full_On_Short_Score %>% arrange(desc(Y)) %>% head(1) %>% pull(Word)
-Y_FoS_Top_Cons = Full_On_Short_Score %>% arrange(desc(Y_Cons)) %>% head(1) %>% pull(Word)
-
-G_FoF_Top = Full_Score %>% arrange(desc(G)) %>% head(1) %>% pull(Word)
-G_FoF_Top_Cons = Full_Score %>% arrange(desc(G_Cons)) %>% head(1) %>% pull(Word)
-
-G_SoS_Top = Short_Score %>% arrange(desc(G)) %>% head(1) %>% pull(Word)
-G_SoS_Top_Cons = Short_Score %>% arrange(desc(G_Cons)) %>% head(1) %>% pull(Word)
-
-G_FoS_Top = Full_On_Short_Score %>% arrange(desc(G)) %>% head(1) %>% pull(Word)
-G_FoS_Top_Cons = Full_On_Short_Score %>% arrange(desc(G_Cons)) %>% head(1) %>% pull(Word)
-
-C_FoF_Top = Full_Score %>% arrange(desc(C)) %>% head(1) %>% pull(Word)
-C_FoF_Top_Cons = Full_Score %>% arrange(desc(C_Cons)) %>% head(1) %>% pull(Word)
-
-C_SoS_Top = Short_Score %>% arrange(desc(C)) %>% head(1) %>% pull(Word)
-C_SoS_Top_Cons = Short_Score %>% arrange(desc(C_Cons)) %>% head(1) %>% pull(Word)
-
-C_FoS_Top = Full_On_Short_Score %>% arrange(desc(C)) %>% head(1) %>% pull(Word)
-C_FoS_Top_Cons = Full_On_Short_Score %>% arrange(desc(C_Cons)) %>% head(1) %>% pull(Word)
-
-FullTable = rbind(c(Y=Y_FoF_Top, G=G_FoF_Top, C=C_FoF_Top),
-                  c(Y=Y_FoF_Top_Cons, G=G_FoF_Top_Cons, C=C_FoF_Top_Cons),
-                  c(Y=Y_SoS_Top, G=G_SoS_Top, C=C_SoS_Top),
-                  c(Y=Y_SoS_Top_Cons, G=G_SoS_Top_Cons, C=C_SoS_Top_Cons),
-                  c(Y=Y_FoS_Top, G=G_FoS_Top, C=C_FoS_Top),
-                  c(Y=Y_FoS_Top_Cons, G=G_FoS_Top_Cons, C=C_FoS_Top_Cons))
-rownames(FullTable) <- c("Full on Full", "... Consonants", "Short on Short", "... Consonants", "Full on Short", "... Consonants")
 
 FullTable %>%
   knitr::kable("simple", col.names=c("Y", "G", "C")) %>%

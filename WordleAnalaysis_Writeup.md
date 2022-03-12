@@ -24,7 +24,7 @@ consonants and ignoring the contribution of vowels to our score.
 
 In order to do this, we are going to use two different sets of words to
 treat as our “potential guesses” for the game. We have a large list
-(8497 words) of all 5 letter words in the English language. This is
+(8498 words) of all 5 letter words in the English language. This is
 *technically* the full breadth of possible words in Wordle, but it
 includes words like “aalii” (a type of bush found in Hawaii) and “ganch”
 (to execute via impaling) in the list. While these are possible, they

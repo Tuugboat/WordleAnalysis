@@ -63,15 +63,26 @@ Gen_LetterInfo <- function(WordSet) {
 #It is much shorter, but also more reasonable in useage than Words5
 #Source: https://github.com/charlesreid1/five-letter-words/blob/master/sgb-words.txt
 
+#wordle-nyt-allowed-guesses.txt comes from a github. Data generating process is unclear but the data set seems good.
+# Source: https://gist.github.com/cfreshman/40608e78e83eb4e1d60b285eb7e9732f
 
-Words5_WordSet = read.delim(here("Data/Words5.txt"), header=F) %>% rename(Word = V1) %>% Gen_WordSet
-SGB_Words_WordSet = read.delim(here("Data/SGB_Words.txt"), header=F) %>% rename(Word = V1) %>% Gen_WordSet
+ManAdd = read.delim(here("Data/ManualAdditions.txt"), header=F) %>% rename(Word =  V1) #Incomplete final line is normal here. TODO
+Allowed_WordSet = read.delim(here("Data/wordle-nyt-allowed-guesses.txt"), header=F) %>% rename(Word = V1) %>% rbind(ManAdd) %>% unique %>% Gen_WordSet
+Words5_WordSet = read.delim(here("Data/Words5.txt"), header=F) %>% rename(Word = V1) %>% rbind(ManAdd) %>% unique %>% Gen_WordSet
+SGB_Words_WordSet = read.delim(here("Data/SGB_Words.txt"), header=F) %>% rename(Word = V1) %>% rbind(ManAdd) %>% unique %>% Gen_WordSet
+
+Combo_Long_WordSet = read.delim(here("Data/wordle-nyt-allowed-guesses.txt"), header=F) %>%
+  rbind(read.delim(here("Data/Words5.txt"), header=F)) %>%
+  rename(Word = V1) %>% rbind(ManAdd) %>% unique %>% Gen_WordSet
+
 
 cl <- parallel::makeCluster(2)
 doParallel::registerDoParallel(cl)
 
 Words5_Letters = Gen_LetterInfo(Words5_WordSet)
 SGB_Words_Letters = Gen_LetterInfo(SGB_Words_WordSet)
+Allowed_Letters = Gen_LetterInfo(Allowed_WordSet)
+Combo_Long_Letters = Gen_LetterInfo(Combo_Long_WordSet)
   
 parallel::stopCluster(cl)
 
@@ -80,3 +91,9 @@ write.csv(Words5_WordSet, here("Data/Words5_WordSet.csv"), row.names=FALSE)
 write.csv(Words5_Letters, here("Data/Words5_LetterInfo.csv"), row.names=FALSE)
 write.csv(SGB_Words_WordSet, here("Data/SGB_Words_WordSet.csv"), row.names=FALSE)
 write.csv(SGB_Words_Letters, here("Data/SGB_Words_LetterInfo.csv"), row.names=FALSE)
+
+#Gen 2 of the lists. SGB is out, short is now allowed guesses, long is Unix+Allowed
+write.csv(Allowed_WordSet, here("Data/Allowed_WordSet.csv"), row.names=FALSE)
+write.csv(Allowed_Letters, here("Data/Allowed_LetterInfo.csv"), row.names=FALSE)
+write.csv(Combo_Long_WordSet, here("Data/Combo_Long_WordSet.csv"), row.names=FALSE)
+write.csv(Combo_Long_Letters, here("Data/Combo_Long_LetterInfo.csv"), row.names=FALSE)

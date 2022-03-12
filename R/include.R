@@ -28,7 +28,8 @@ librarian::shelf(
   gapminder,
   stargazer,
   snakecase,
-  foreach
+  foreach,
+  kableExtra
 )
 
 # tell here where we are so we can use it elsewhere
