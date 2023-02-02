@@ -145,7 +145,7 @@ $$G=\sum_{j=1}^5 P(1\{x_j=w_{ij}\})$$
 
 Once we have calculated a $Y$ and $G$ score for a word, we can combine these two scores based on a given weight $t$ to give us the combined score $C$
 
-$$C=tG+(1-t)Y$$
+$$C=t \times G+(1-t) \times Y$$
 
 Of note with the C score is to remember that we do discredit green results when searching for yellow results. A yellow letter and a green letter will both count for our purposes as a "yellow outcome", but only a green letter will count as a "green outcome". When we look at our full score, it's important to remember that the trade-off is between having results hit in general and having a specifically green result result instead. Each of yellow letters has $P(Green)=0.2$, so there is a *very* strong relationship between them. This becomes consequential when we are choosing our weighting factor $t$, since at low values of $t$ we would expect remarkable ranking similarity between different choices.
 
@@ -154,7 +154,7 @@ Finally, we can reconsider the $Y$, $G$, and $C$ values but ignore the vowels wh
 
 # Results
 
-The fun stuff! All of these tables share a common format: three sets of three columns. The first set of three is the long list, judged on the long list. The second set is the short list, judged on the short list. The last set is the long list, judged on the short list. Likely, the columns of interest are the last three, since they give all possible guesses predicting any reasonable result. The tables show the top 5 performers, where ties are broken by the other scores: ties in yellow-seeking scores are broken by their green-seeking performance and vice-versa. 
+The fun stuff! All of these tables share a common format: three sets of two columns. The first set of three is the long list, judged on the long list. The second set is the short list, judged on the short list. The last set is the long list, judged on the short list. Likely, the columns of interest are the last three, since they give all possible guesses predicting any reasonable result. The tables show the top 5 performers, where ties are broken by the other scores: ties in yellow-seeking scores are broken by their green-seeking performance and vice-versa. 
 
 
 ## Letter-Seeking
